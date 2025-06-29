@@ -98,22 +98,7 @@
     <h2>Auto-Updated Zenodo Feed</h2>
 <ul id="zenodo-list"></ul>
 
-<script>
-fetch('https://zenodo.org/api/records/?q=creators.orcid:0009-0009-8972-8834&sort=mostrecent&size=5')
-  .then(response => response.json())
-  .then(data => {
-    const list = document.getElementById('zenodo-list');
-    data.hits.hits.forEach(item => {
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.href = item.links.html;
-      a.target = "_blank";
-      a.textContent = item.metadata.title;
-      li.appendChild(a);
-      list.appendChild(li);
-    });
-  });
-</script>
+
      <li>
   <a href="https://doi.org/10.5281/zenodo.15761077" target="_blank">
     INTRODUCTION TO THE PROCLAMATION OF XREALISM
